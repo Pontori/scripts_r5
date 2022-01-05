@@ -99,7 +99,8 @@ struct
 
 string[XP_TYPE._NUM_TYPES] xpDisplayNames = ["Unhandled", ...]
 
-bool function DEV_ShouldIgnorePersistence() {
+bool function DEV_ShouldIgnorePersistence()
+{
 	return true
 }
 
@@ -195,10 +196,6 @@ void function InitXP( entity player )
 void function XP_GameStartedPlaying()
 {
 	//#if DEV
-	print("DEVVVVVVVVVVVVVVV")
-	print("DEVVVVVVVVVVVVVVV")
-	print("DEVVVVVVVVVVVVVVV")
-	print("DEVVVVVVVVVVVVVVV")
 		if ( DEV_ShouldIgnorePersistence() )
 			return
 	//#endif

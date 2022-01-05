@@ -217,6 +217,7 @@ global enum eDamageSourceId
 	mp_titancore_upgrade
 	mp_titanweapon_xo16_vanguard
 	mp_weapon_arc_trap
+	mp_weapon_arc_launcher
 	core_overload
 	mp_titanweapon_stasis
 	mp_titanweapon_stealth_titan
@@ -235,14 +236,6 @@ global enum eDamageSourceId
 	//rocketstrike
 	//orbitallaser
 	//explosion
-
-	mp_weapon_arc_launcher
-
-	
-	mp_weapon_satchel //added for r5_scripts
-	mp_weapon_proximity_mine //added for r5_scripts
-	mp_titanweapon_arc_pylon //added for r5_scripts
-	mp_titanability_smoke //added for r5_scripts
 }
 
 //When adding new mods, they need to be added below and to persistent_player_data_version_N.pdef in r1/cfg/server.
@@ -536,8 +529,8 @@ void function DamageTypes_Init()
 void function RegisterWeaponDamageSource( string weaponRef )
 {
 	int sourceID = eDamageSourceId[weaponRef]
-	file.damageSourceIDToName[ sourceID ] <- "e" //GetWeaponInfoFileKeyField_GlobalString( weaponRef, "shortprintname" )
-	file.damageSourceIDToImage[ sourceID ] <- $"rui/weapon_icons/r5/weapon_flatline"//GetWeaponInfoFileKeyFieldAsset_Global( weaponRef, "hud_icon" )
+	file.damageSourceIDToName[ sourceID ] <- GetWeaponInfoFileKeyField_GlobalString( weaponRef, "shortprintname" )
+	file.damageSourceIDToImage[ sourceID ] <- GetWeaponInfoFileKeyFieldAsset_Global( weaponRef, "hud_icon" )
 	file.damageSourceIDToString[ sourceID ] <- weaponRef
 }
 

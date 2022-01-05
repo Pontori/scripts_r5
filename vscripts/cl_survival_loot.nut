@@ -256,6 +256,7 @@ void function UseSelectedHealthPickupType( entity player )
 {
 	if ( HealthkitWheelToggleEnabled() && IsCommsMenuActive() )
 		return
+	printt("UseSelectedHealthPickupType ", WeaponDrivenConsumablesEnabled())
 
 	if ( WeaponDrivenConsumablesEnabled() )
 	{
@@ -293,6 +294,7 @@ void function Survival_UseHealthPack( entity player, string ref )
 	//	return
 
 	//file.nextHealthAllowTime = Time() + waitTime
+	printt("!!! Sur_UseHealthPack", ref)
 	player.ClientCommand( "Sur_UseHealthPack " + ref )
 }
 

@@ -409,6 +409,7 @@ void function RemovePlayerFromCurrentZone( entity player )
 {
 	if ( player.p.currentZoneId == INVALID_ZONE_ID )
 		return
+
 	if ( player.p.currentZoneId == 0 )
 		return
 

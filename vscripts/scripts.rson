@@ -227,10 +227,12 @@ Scripts:
 	weapons/_vortex.nut
 	weapons/_weapon_dialogue.nut
 	weapons/_weapon_utility.nut
+	weapons/_weapon_reactive_effects.gnut
 	weapons/mp_ability_cloak.nut
 	weapons/mp_ability_grapple.nut
 	weapons/mp_ability_holopilot.nut
 
+	weapons/mp_ability_heal.nut
 	weapons/mp_ability_sonar.nut
 	weapons/mp_weapon_basic_bolt.nut
 
@@ -257,6 +259,7 @@ Scripts:
 	weapons/sh_phase_shift.gnut
 	weapons/sh_smart_ammo.gnut
 	weapons/sh_sonar.gnut
+	weapons/sh_stim.gnut
 	weapons/mp_weapon_energy_shotgun.nut
 ]
 
@@ -403,6 +406,7 @@ Scripts:
 	vehicle/_vehicle_behavior.gnut
 	vehicle/_vehicle_dropship_new.nut
 	weapons/_at_turrets.gnut
+	weapons/_ball_lightning.gnut
 	weapons/_cloaker.gnut
 	weapons/_particle_wall.gnut
 
@@ -710,6 +714,7 @@ Scripts:
 	weapons/mp_weapon_phase_tunnel.nut
 	weapons/mp_weapon_incap_shield.nut
 	weapons/mp_ability_care_package.nut
+	weapons/mp_weapon_jump_pad.nut
 
 	sh_clientmusic.nut
 
