@@ -1,4 +1,4 @@
-npc_training_dummy
+npc_training_dummy_trainer
 {
 	AIClass							human
 	TraverseAnimType				spectre

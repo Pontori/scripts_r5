@@ -653,11 +653,12 @@ void function Cl_Survival_AddClient( entity player )
 
 	SetConVarFloat( "dof_variable_blur", 0.0 )
 
-	#if(false)
-
-#endif //
-
 	WaitingForPlayersOverlay_Setup( player )
+	
+	if(GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	{
+		RuiTrackInt( file.compassRui, "gameState", null, RUI_TRACK_SCRIPT_NETWORK_VAR_GLOBAL_INT, 0 )
+	}
 }
 
 
@@ -701,8 +702,28 @@ void function SURVIVAL_PopulatePlayerInfoRui( entity player, var rui )
 	RuiTrackFloat( rui, "playerTargetHealthFracTemp", player, RUI_TRACK_HEAL_TARGET )
 
 	OverwriteWithCustomPlayerInfoTreatment( player, rui )
+	
+	if(GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	{
+		RuiSetColorAlpha( rui, "customCharacterColor", SrgbToLinear( <53, 222, 47> / 255.0 ), 1.0 )
+		RuiSetBool( rui, "useCustomCharacterColor", true )
+	}
+	if(RGB_HUD)
+		thread RGBRui(rui)
 }
 
+void function RGBRui(var rui)
+{
+	entity player = GetLocalClientPlayer()
+	while(RGB_HUD)
+	{
+		int randomr = RandomInt(255)
+		int randomg = RandomInt(255) 
+		int randomb = RandomInt(255)	
+		RuiSetColorAlpha( rui, "customCharacterColor", SrgbToLinear( <randomr, randomg, randomb> / 255.0 ), 1.0 )	
+		wait 0.1
+	}
+}
 
 void function OverwriteWithCustomPlayerInfoTreatment( entity player, var rui )
 {
