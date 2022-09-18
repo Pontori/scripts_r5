@@ -175,7 +175,7 @@ void function CodeCallback_MapSpawn() // original script entry point
 {
 	ShWeapons_LevelInit()
 	//seterrorhandler(void function() {})
-	ScriptCompilerTest()
+	//ScriptCompilerTest()
 	LoadDiamond()
 	MapTriggers_Init()
 

@@ -213,10 +213,6 @@ void function UpdateSystemPanel( var panel )
 			if ( (GetTeamSize( GetTeam() ) > 1) && FiringRangeHasFriendlyFire() )
 				SetButtonData( panel, buttonIndex++, file.friendlyFireButtonData[ panel ] )
 		}
-
-		//If you used the private_match to host the server this will work, maybe there is a better way to find who is host in ui?
-		//if(server_host_name == GetPlayerName() && !IsFiringRangeGameMode() && !IsSurvivalTraining())
-			//SetButtonData( panel, buttonIndex++, file.endmatchButtonData[ panel ] )
 	}
 	else // any other cases
 	{

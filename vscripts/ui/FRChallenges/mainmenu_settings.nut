@@ -159,7 +159,7 @@ void function WeaponSelectorOpenMenu(var button)
 
 void function LegendSelectOpen(var button)
 {
-	RunClientScript("OpenCharacterSelectAimTrainer", true)
+	RunClientScript("OpenCharacterSelectNewMenu", true)
 }
 
 void function UpdateChallengeDuration(var button)

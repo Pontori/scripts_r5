@@ -8,6 +8,5 @@ classes
 	import npc_dummie_combat.txt
 	import npc_frag_drone_throwable.txt
 	import npc_dummie_combat_trainer.txt
-	import npc_frag_drone_trainer.txt
 	import npc_training_dummy_trainer.txt
 }

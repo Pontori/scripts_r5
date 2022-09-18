@@ -1060,8 +1060,9 @@ void function OnHealthPickupTypeChanged( entity player, int oldKitType, int kitT
 
 	if ( !IsLocalViewPlayer( player ) )
 		return
-
-	UpdateDpadHud( player )
+	
+	if(!GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+		UpdateDpadHud( player )
 }
 
 
@@ -3128,7 +3129,10 @@ void function OnGamestatePrematch()
 
 void function SetDpadMenuVisible()
 {
-	RuiSetBool( file.dpadMenuRui, "isVisible", GetHudDefaultVisibility() )
+	if(!GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+		RuiSetBool( file.dpadMenuRui, "isVisible", GetHudDefaultVisibility() )
+	else
+		RuiSetBool( file.dpadMenuRui, "isVisible", false )
 }
 
 
