@@ -77,7 +77,7 @@ void function InitFRChallengesMainMenu( var newMenuArg )
 	HudElem_SetRuiArg( gameMenuButton, "shortcutText", "Global Settings" )
 	Hud_AddEventHandler( gameMenuButton, UIE_CLICK, OpenGlobalSettings )
 
-	if(IsConnected() && GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	if(IsConnected() && GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		RunClientScript("RefreshChallengeActivated")
 }
 

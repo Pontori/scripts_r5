@@ -302,7 +302,7 @@ void function WeaponUtility_Init()
 	PrecacheImpactEffectTable( CLUSTER_ROCKET_FX_TABLE )
 
 	#if SERVER
-		if(!GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+		if(!GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		{
 			AddDamageCallbackSourceID( eDamageSourceId.mp_weapon_grenade_emp, EMP_DamagedPlayerOrNPC )
 			AddDamageCallbackSourceID( eDamageSourceId.damagedef_ticky_arc_blast, EMP_DamagedPlayerOrNPC )

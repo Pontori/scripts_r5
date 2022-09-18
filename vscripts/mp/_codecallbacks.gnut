@@ -330,7 +330,6 @@ void function CodeCallback_DamagePlayerOrNPC( entity ent, var damageInfo )
 
 	if ( entIsNPC && attackerIsPlayer)
 	{
-		//AI bleedthrough fix By Retículo Endoplasmático#5955 (CaféDeColombiaFPS)
 		if(ent.GetShieldHealth() > 0)
 		{
 
@@ -381,7 +380,7 @@ void function CodeCallback_DamagePlayerOrNPC( entity ent, var damageInfo )
 				DamageInfo_AddCustomDamageType( damageInfo, DF_KILLSHOT )
 				thread EmitSoundOnEntityOnlyToPlayer( attacker, attacker, "flesh_bulletimpact_downedshot_1p_vs_3p" )
 				
-				if(GetCurrentPlaylistVarBool( "register_dummie_kill_as_actual_kill", false )  && !GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+				if(GetCurrentPlaylistVarBool( "register_dummie_kill_as_actual_kill", false )  && !GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 					attacker.SetPlayerNetInt( "kills", attacker.GetPlayerNetInt( "kills" ) + 1 )
 				UpdatePlayerCounts()
 			}

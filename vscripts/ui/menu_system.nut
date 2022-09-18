@@ -174,9 +174,9 @@ void function OnSystemMenu_Open()
 void function UpdateSystemPanel( var panel )
 {
 	//temp workaround, not the best place for this tbh
-	if(IsConnected() && !GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	if(IsConnected() && !GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		file.lobbyReturnButtonData[ panel ].label = "#RETURN_TO_LOBBY"
-	else if(IsConnected() && GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	else if(IsConnected() && GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		file.lobbyReturnButtonData[ panel ].label = "EXIT AIM TRAINER"
 	file.lobbyReturnButtonData[ panel ].activateFunc = LeaveDialog
 
@@ -191,7 +191,7 @@ void function UpdateSystemPanel( var panel )
 		SetCursorPosition( <1920.0 * 0.5, 1080.0 * 0.5, 0> )
 
 		SetButtonData( panel, buttonIndex++, file.settingsButtonData[ panel ] )
-		if(!GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+		if(!GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		{
 			if ( IsSurvivalTraining() || IsFiringRangeGameMode() )
 				SetButtonData( panel, buttonIndex++, file.lobbyReturnButtonData[ panel ] )
@@ -205,7 +205,7 @@ void function UpdateSystemPanel( var panel )
 				SetButtonData( panel, buttonIndex++, file.ExitChallengeButtonData[ panel ] )
 		}
 
-		if ( IsFiringRangeGameMode() && !GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+		if ( IsFiringRangeGameMode() && !GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		{
 			SetButtonData( panel, buttonIndex++, file.changeCharacterButtonData[ panel ] )
 		//	SetButtonData( panel, buttonIndex++, file.thirdPersonButtonData[ panel ] )
@@ -239,7 +239,7 @@ void function UpdateSystemPanel( var panel )
 	}
 
 	var dataCenterElem = Hud_GetChild( panel, "DataCenter" )
-	if(GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	if(GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		Hud_SetText( dataCenterElem, "Flowstate Aim Trainer by @CafeFPS")
 	else
 		Hud_SetText( dataCenterElem, Localize( "#SYSTEM_DATACENTER", GetDatacenterName(), GetDatacenterPing() ) )
@@ -261,7 +261,7 @@ void function SetButtonData( var panel, int buttonIndex, ButtonData buttonData )
 
 void function OnSystemMenu_Close()
 {
-	if(ISAIMTRAINER && IsConnected() && GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false )){
+	if(ISAIMTRAINER && IsConnected() && GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false )){
 		CloseAllMenus()
 		RunClientScript("ServerCallback_OpenFRChallengesMainMenu", PlayerKillsForChallengesUI)
 	}
@@ -272,7 +272,7 @@ void function OnSystemMenu_NavigateBack()
 {
 	Assert( GetActiveMenu() == file.menu )
 	CloseActiveMenu()
-	if(ISAIMTRAINER && IsConnected() && GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false )){
+	if(ISAIMTRAINER && IsConnected() && GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false )){
 		CloseAllMenus()
 		RunClientScript("ServerCallback_OpenFRChallengesMainMenu", PlayerKillsForChallengesUI)
 	}

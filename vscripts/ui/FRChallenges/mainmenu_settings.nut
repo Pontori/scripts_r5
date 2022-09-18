@@ -50,7 +50,6 @@ void function InitFRChallengesSettings( var newMenuArg )
 	AddButtonEventHandler( Hud_GetChild( file.menu, "InfiniteTrainingButton"), UIE_CHANGE, InfiniteTrainingButton )
 	AddButtonEventHandler( Hud_GetChild( file.menu, "UseDummyModelButton"), UIE_CHANGE, UseDummyModelButton)
 	AddButtonEventHandler( Hud_GetChild( file.menu, "DurationText"), UIE_CHANGE, UpdateChallengeDuration )
-	AddButtonEventHandler( Hud_GetChild( file.menu, "SupportTheDev"), UIE_CLICK, SupportTheDev)
 	AddButtonEventHandler( Hud_GetChild( file.menu, "BtnServerListLeftArrow"), UIE_CLICK, firstpage)
 	AddButtonEventHandler( Hud_GetChild( file.menu, "BtnServerListRightArrow"), UIE_CLICK, secondpage)
 	
@@ -97,11 +96,6 @@ void function secondpage(var button)
 	{
 		Hud_SetVisible( elem, true )
 	}
-}
-
-void function SupportTheDev(var button)
-{
-	LaunchExternalWebBrowser( "https://ko-fi.com/r5r_colombia", WEBBROWSER_FLAG_NONE )
 }
 
 void function SpeedTargetsButton(var button)

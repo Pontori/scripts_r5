@@ -655,7 +655,7 @@ void function Cl_Survival_AddClient( entity player )
 
 	WaitingForPlayersOverlay_Setup( player )
 	
-	if(GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	if(GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 	{
 		RuiTrackInt( file.compassRui, "gameState", null, RUI_TRACK_SCRIPT_NETWORK_VAR_GLOBAL_INT, 0 )
 	}
@@ -703,7 +703,7 @@ void function SURVIVAL_PopulatePlayerInfoRui( entity player, var rui )
 
 	OverwriteWithCustomPlayerInfoTreatment( player, rui )
 	
-	if(GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	if(GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 	{
 		RuiSetColorAlpha( rui, "customCharacterColor", SrgbToLinear( <53, 222, 47> / 255.0 ), 1.0 )
 		RuiSetBool( rui, "useCustomCharacterColor", true )
@@ -1082,7 +1082,7 @@ void function OnHealthPickupTypeChanged( entity player, int oldKitType, int kitT
 	if ( !IsLocalViewPlayer( player ) )
 		return
 	
-	if(!GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	if(!GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		UpdateDpadHud( player )
 }
 
@@ -3150,7 +3150,7 @@ void function OnGamestatePrematch()
 
 void function SetDpadMenuVisible()
 {
-	if(!GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	if(!GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		RuiSetBool( file.dpadMenuRui, "isVisible", GetHudDefaultVisibility() )
 	else
 		RuiSetBool( file.dpadMenuRui, "isVisible", false )

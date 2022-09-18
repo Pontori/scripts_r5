@@ -383,7 +383,7 @@ void function Client_Init()
 	ClKillReplayHud_Init()
 	ClScoreboardMp_Init()
 	//ClTitanSoul_Init()
-	if(!GetCurrentPlaylistVarBool( "firingrange_aimtrainerbycolombia", false ))
+	if(!GetCurrentPlaylistVarBool( "r5reloaded_aimtrainer", false ))
 		ClMinimap_Init()
 
 	ClGruntChatter_MP_Init()
