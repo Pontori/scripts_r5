@@ -207,7 +207,7 @@ void function InitArenasBuyPanel2( var panel )
 	file.weaponButtons.append(Hud_GetChild( menu, "R301Button" ))
 
 	var rampage = Hud_GetChild( menu, "Rampage" )
-	RuiSetImage( Hud_GetRui( rampage ), "basicImage", $"rui/weapon_icons/r5/weapon_spitfire" )
+	RuiSetImage( Hud_GetRui( rampage ), "basicImage", $"rui/weapon_icons/r5/weapon_dragon" )
 	AddEventHandlerToButton( menu, "RampageButton", UIE_CLICK, BuyRampage )
 	AddEventHandlerToButton( menu, "RampageButton", UIE_CLICKRIGHT, OpenAttachmentsBox )
 	file.weaponButtons.append(Hud_GetChild( menu, "RampageButton" ))
@@ -292,7 +292,7 @@ void function OpenAttachmentsBox( var button )
 	}else if(button == Hud_GetChild( file.menu, "RampageButton" ))
 	{
 		file.desiredWeaponButtonToMark = Hud_GetChild( file.menu, "RampageButton" )
-		file.desiredweapon = "mp_weapon_rampage"
+		file.desiredweapon = "mp_weapon_dragon_lmg"
 		lmg2 = true
 		file.weapontype = "lmg2"
 	}
@@ -858,6 +858,6 @@ void function BuyRampage(var button)
 {
 	CleanAllButtons()	
 	RuiSetInt( Hud_GetRui( button ), "status", eFriendStatus.ONLINE_INGAME )
-	RunClientScript( "UIToClient_MenuGiveWeapon", "mp_weapon_rampage" )
-	PlayerCurrentWeapon = GetWeaponNameForUI("mp_weapon_rampage")
+	RunClientScript( "UIToClient_MenuGiveWeapon", "mp_weapon_dragon_lmg" )
+	PlayerCurrentWeapon = GetWeaponNameForUI("mp_weapon_dragon_lmg")
 }
