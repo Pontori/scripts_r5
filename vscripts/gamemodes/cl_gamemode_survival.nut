@@ -94,7 +94,7 @@ global function SetNextCircleDisplayCustomClosing
 global function SetNextCircleDisplayCustomClear
 
 global function SetChampionScreenRuiAsset
-
+global function InitSurvivalHealthBar
 #if R5DEV
 global function Dev_ShowVictorySequence
 global function Dev_AdjustVictorySequence
