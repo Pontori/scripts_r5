@@ -200,7 +200,6 @@ void function InitArenasBuyPanel3( var panel )
 	var kraber = Hud_GetChild( menu, "Kraber" )
 	RuiSetImage( Hud_GetRui( kraber ), "basicImage", $"rui/weapon_icons/r5/weapon_sniper" )
 	AddEventHandlerToButton( menu, "KraberButton", UIE_CLICK, BuyKraber )
-	AddEventHandlerToButton( menu, "KraberButton", UIE_CLICKRIGHT, BuyKraber )
 	file.weaponButtons.append(Hud_GetChild( menu, "KraberButton" ))
 
 	CleanAllButtons()

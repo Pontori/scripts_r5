@@ -173,7 +173,6 @@ void function InitArenasBuyPanel2( var panel )
 	var lstar = Hud_GetChild( menu, "LStar" )
 	RuiSetImage( Hud_GetRui( lstar ), "basicImage", $"rui/weapon_icons/r5/weapon_lstar" )
 	AddEventHandlerToButton( menu, "LStarButton", UIE_CLICK, BuyLStar )
-	AddEventHandlerToButton( menu, "LStarButton", UIE_CLICKRIGHT, OpenAttachmentsBox )
 	file.weaponButtons.append(Hud_GetChild( menu, "LStarButton" ))
 	
 	var devotion = Hud_GetChild( menu, "Devotion" )
